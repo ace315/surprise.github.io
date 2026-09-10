@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Now Playing - Until I Found You</title>
+
+    <!-- IMPORTANT:
+    ../ because this file is inside
+    the songs folder -->
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="page song-detail-page">
+
+
+    <!-- BACK -->
+
+    <a
+        href="../03-playlist.html"
+        class="back-button"
+    >
+        ← Back
+    </a>
+
+    <main class="song-detail-container">
+
+
+        <!-- ALBUM COVER -->
+
+        <div class="selected-song-cover">
+
+            <img
+                src="../images/song7.jfif"
+                alt="Song Cover"
+            >
+
+        </div>
+
+
+        <!-- SONG INFORMATION -->
+
+        <section class="selected-song-info">
+
+            <p class="section-label">
+                NOW PLAYING
+            </p>
+
+
+            <h1>
+                Until I Found You
+            </h1>
+
+
+            <p class="artist-name">
+                Stephen Sanchez, Em Beihold
+            </p>
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../music/song7.mp3"
+            ></audio>
+
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <!-- CONTROLS -->
+
+            <div class="song-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    onclick="toggleMusic()"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY THIS SONG -->
+
+        <section class="why-song">
+
+            <h2>
+                Why I choose this song? 
+            </h2>
+
+
+            <p style="font-style: italic; text-align: center;">
+                
+                “I would never fall in love again until I found her.” 
+
+                <br><br>
+
+                <!-- PUT YOUR PERSONAL MESSAGE HERE -->
+
+            </p>
+
+
+            <p style="text-align: center;">
+
+                This song reminds me of you because... it feels like finding someone you don't want to lose. 
+                Out of all the people I could have met, somehow I found you, 
+                and now I can't imagine my days without having you in them.
+
+            </p>
+
+        </section>
+
+
+        <!-- SONG NAVIGATION -->
+
+        <div class="song-navigation">
+
+            <a href="song8.html">
+                Next Song →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

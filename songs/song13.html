@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Now Playing - Best Part</title>
+
+    <!-- IMPORTANT:
+    ../ because this file is inside
+    the songs folder -->
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="page song-detail-page">
+
+
+    <!-- BACK -->
+
+    <a
+        href="../03-playlist.html"
+        class="back-button"
+    >
+        ← Back
+    </a>
+
+    <main class="song-detail-container">
+
+
+        <!-- ALBUM COVER -->
+
+        <div class="selected-song-cover">
+
+            <img
+                src="../images/song13.jfif"
+                alt="Song Cover"
+            >
+
+        </div>
+
+
+        <!-- SONG INFORMATION -->
+
+        <section class="selected-song-info">
+
+            <p class="section-label">
+                NOW PLAYING
+            </p>
+
+
+            <h1>
+                Best Part
+            </h1>
+
+
+            <p class="artist-name">
+                Daniel Caesar ft. H.E.R.
+            </p>
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../music/song13.mp3"
+            ></audio>
+
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <!-- CONTROLS -->
+
+            <div class="song-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    onclick="toggleMusic()"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY THIS SONG -->
+
+        <section class="why-song">
+
+            <h2>
+                Why I choose this song? 
+            </h2>
+
+
+            <p style="font-style: italic; text-align: center;">
+                
+                “You’re my water when I’m stuck in the desert.”
+
+                <br><br>
+
+                <!-- PUT YOUR PERSONAL MESSAGE HERE -->
+
+            </p>
+
+
+            <p style="text-align: center;">
+
+                I saved this because I want it to represent how I see you. 
+                You don't have to do anything extraordinary to make my day better. 
+                Sometimes just hearing from you, talking to you, or knowing you're there is already enough.
+
+                <br><br>
+
+                <p style="font-style: italic; text-align: center;">
+
+                    You somehow became one of the best parts of my days. 
+                    Even when we're miles apart, a simple message from you can change my whole mood.
+                
+                </p>
+
+            </p>
+
+        </section>
+
+
+        <!-- SONG NAVIGATION -->
+
+        <div class="song-navigation">
+
+            <a href="song14.html">
+                Next Song →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
