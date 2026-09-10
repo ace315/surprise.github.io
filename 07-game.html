@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catch My Hearts!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="page game-page">
+
+    <div class="top-bar">
+
+        <a href="02-home.html" class="back-button">
+            ← Back
+        </a>
+
+    </div>
+
+
+    <main class="game-container">
+
+        <h1>Catch My Hearts ❤️</h1>
+
+        <p class="game-instructions">
+            Tap the screen or press SPACE to fly.<br>
+            Catch the hearts before you fall! ❤️
+        </p>
+
+
+        <!-- GAME STATS -->
+
+        <div class="game-stats">
+
+            <div class="stat">
+                ❤️ <span id="score">0</span>
+                <small>Score</small>
+            </div>
+
+            <div class="stat">
+                🔥 <span id="combo">0</span>
+                <small>Combo</small>
+            </div>
+
+            <div class="stat">
+                🏆 <span id="highScore">0</span>
+                <small>Best</small>
+            </div>
+
+        </div>
+
+
+        <!-- GAME AREA -->
+
+<div id="gameArea">
+
+    <!-- PLAYER IMAGE -->
+    <div id="player">
+        <img
+            src="images/girlfriend.jfif"
+            alt="Player"
+            id="playerImage"
+        >
+    </div>
+
+    <!-- START SCREEN -->
+    <div id="gameStartScreen" class="game-overlay">
+
+        <h2>Ready? ❤️</h2>
+
+        <p>
+            Catch hearts to unlock
+            the final surprise.
+        </p>
+
+        <button
+            class="main-button"
+            onclick="startGame()"
+        >
+            Start Game ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- GAME OVER POPUP -->
+
+<div id="gameOverPopup" class="game-popup hidden">
+
+    <div class="popup-content">
+
+        <h2>Game Over 😭</h2>
+
+        <p>
+            You collected
+            <strong id="finalScore">0</strong>
+            points ❤️
+        </p>
+
+        <p id="gameOverMessage"></p>
+
+
+        <button
+            class="main-button"
+            onclick="restartGame()"
+        >
+            Try Again 🔄
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- WIN POPUP -->
+
+<div id="winPopup" class="game-popup hidden">
+
+    <div class="popup-content">
+
+        <h2>You Did It! 😭❤️</h2>
+
+        <p>
+            You caught enough hearts...
+        </p>
+
+        <p>
+            There's one last thing
+            waiting for you. 💌
+        </p>
+
+        <div class="special-heart">
+            💌
+        </div>
+
+        <a
+            href="08-final-question.html"
+            class="main-button"
+        >
+            Open the Final Letter 💌
+        </a>
+
+    </div>
+
+</div>
+
+
+        <!-- LEGEND -->
+
+        <div class="heart-legend">
+
+            <span>❤️ +1</span>
+            <span>💖 +2</span>
+            <span>💘 +3</span>
+            <span>💝 +5</span>
+
+        </div>
+
+
+        <!-- GAME OVER -->
+
+        <div
+            id="gameOver"
+            class="game-result hidden">
+
+            <h2>Game Over 😭</h2>
+
+            <p>
+                You collected
+                <strong id="finalScore">0</strong>
+                points ❤️
+            </p>
+
+            <p id="gameOverMessage"></p>
+
+
+            <button
+                class="main-button"
+                onclick="restartGame()">
+
+                Try Again 🔄
+
+            </button>
+
+        </div>
+
+
+        <!-- WIN SCREEN -->
+
+        <div
+            id="winScreen"
+            class="game-result hidden">
+
+            <h2>You Did It! 😭❤️</h2>
+
+            <p>
+                You caught enough hearts...
+            </p>
+
+            <p>
+                But there's one last thing waiting for you.
+            </p>
+
+            <div class="special-heart">
+                💌
+            </div>
+
+            <a
+                href="08-final-question.html"
+                class="main-button">
+
+                Open the Final Letter 💌
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

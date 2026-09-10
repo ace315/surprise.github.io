@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Someone Special 💌</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background:
+                radial-gradient(circle at top left, #3b176b, transparent 35%),
+                radial-gradient(circle at bottom right, #7a245f, transparent 35%),
+                #0b0712;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
+
+        .heart {
+            position: fixed;
+            color: rgba(255, 130, 190, 0.5);
+            animation: floatUp linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(90%, 800px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 14px 25px;
+
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+
+            z-index: 1000;
+        }
+
+        nav h3 {
+            font-family: "Great Vibes", cursive;
+            font-size: 25px;
+            color: #ffb6e1;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 15px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9ed2;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .small-text {
+            color: #ff9ed2;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(65px, 12vw, 140px);
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 25px auto;
+            color: #d7cedf;
+            line-height: 1.8;
+        }
+
+        .main-button {
+            margin-top: 15px;
+
+            padding: 15px 30px;
+
+            border: none;
+            border-radius: 50px;
+
+            background: linear-gradient(135deg, #ff70b5, #9b5cff);
+            color: white;
+
+            font-family: inherit;
+            font-size: 15px;
+
+            cursor: pointer;
+
+            box-shadow: 0 10px 30px rgba(255, 100, 190, 0.3);
+
+            transition: 0.3s;
+        }
+
+        .main-button:hover {
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            width: min(1100px, 90%);
+            margin: auto;
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #ff9ed2;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 5vw, 55px);
+            margin-top: 10px;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 25px;
+        }
+
+        /* =========================
+           STORY / TIMELINE
+        ========================= */
+
+        .timeline {
+            display: grid;
+            gap: 20px;
+        }
+
+        .timeline-card {
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 150, 210, 0.4);
+        }
+
+        .timeline-card .emoji {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .timeline-card p {
+            color: #d7cedf;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           THINGS I LIKE
+        ========================= */
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .reason-card {
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .reason-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .reason-card p {
+            margin-top: 10px;
+            color: #d7cedf;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           LETTER
+        ========================= */
+
+        .letter {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px;
+
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 30px;
+        }
+
+        .letter h2 {
+            font-family: "Great Vibes", cursive;
+            font-size: 60px;
+            color: #ffb6e1;
+            margin-bottom: 25px;
+        }
+
+        .letter p {
+            color: #ded6e5;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           FINAL QUESTION
+        ========================= */
+
+        .question-section {
+            text-align: center;
+            padding-bottom: 150px;
+        }
+
+        .question-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .question-box .rose {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .question-box h2 {
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(60px, 8vw, 100px);
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .question-box p {
+            color: #d7cedf;
+            max-width: 550px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .choice {
+            padding: 15px 25px;
+            border-radius: 50px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            background: rgba(255,255,255,0.08);
+            color: white;
+
+            font-family: inherit;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .choice:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .yes {
+            background: linear-gradient(135deg, #ff70b5, #9b5cff);
+            border: none;
+        }
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+
+            z-index: 2000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: min(500px, 100%);
+            padding: 45px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(circle at top, #5d2d8a, transparent 50%),
+                #160d22;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            animation: pop 0.4s ease;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h2 {
+            font-family: "Great Vibes", cursive;
+            font-size: 60px;
+            color: #ffb6e1;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            color: #ded6e5;
+            line-height: 1.8;
+        }
+
+        .close-button {
+            margin-top: 25px;
+            padding: 12px 25px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: white;
+            color: #2b153d;
+
+            font-family: inherit;
+
+            cursor: pointer;
+        }
+
+        /* =========================
+           CONFETTI
+        ========================= */
+
+        .confetti {
+            position: fixed;
+            top: -20px;
+
+            width: 10px;
+            height: 10px;
+
+            animation: fall linear forwards;
+
+            z-index: 3000;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8f8398;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 12px 18px;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .letter {
+                padding: 35px 25px;
+            }
+
+            .hero h1 {
+                font-size: 80px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+    <h3>For You 💌</h3>
+
+    <div>
+        <a href="#story">Our Story</a>
+        <a href="#reasons">Why You</a>
+        <a href="#letter">Letter</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+    <p class="small-text">HEY, [HER NAME] 🤍</p>
+
+    <h1>I Made Something<br>For You.</h1>
+
+    <p>
+        I could've just sent you a message.
+        But you're someone I wanted to make an effort for.
+        So before you continue...
+        please give me a few minutes. 🤍
+    </p>
+
+    <button class="main-button"
+        onclick="document.getElementById('story').scrollIntoView()">
+
+        Okay, I'll stay 🤍
+
+    </button>
+
+</div>
+
+
+<!-- OUR STORY -->
+
+<section id="story">
+
+    <div class="section-title">
+        <span>01 — A LITTLE STORY</span>
+        <h2>Somewhere Along The Way...</h2>
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-card glass">
+            <div class="emoji">📍</div>
+
+            <h3>The First Time We Met</h3>
+
+            <p>
+                I didn't know then that you would become
+                someone this important to me.
+            </p>
+        </div>
+
+
+        <div class="timeline-card glass">
+            <div class="emoji">💬</div>
+
+            <h3>The Conversations</h3>
+
+            <p>
+                Somewhere between random conversations,
+                jokes, and late-night talks,
+                I started looking forward to hearing from you.
+            </p>
+        </div>
+
+
+        <div class="timeline-card glass">
+            <div class="emoji">🤍</div>
+
+            <h3>The Moment I Realized</h3>
+
+            <p>
+                Maybe it wasn't sudden.
+                Maybe I was slowly falling for you
+                without even realizing it.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REASONS -->
+
+<section id="reasons">
+
+    <div class="section-title">
+        <span>02 — WHY YOU?</span>
+        <h2>Things I Like About You</h2>
+    </div>
+
+
+    <div class="reasons">
+
+        <div class="reason-card glass">
+
+            <div class="icon">🌸</div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                Somehow, it can make an ordinary day
+                feel a little better.
+            </p>
+
+        </div>
+
+
+        <div class="reason-card glass">
+
+            <div class="icon">😂</div>
+
+            <h3>Your Personality</h3>
+
+            <p>
+                You're one of those people who can make
+                even simple moments memorable.
+            </p>
+
+        </div>
+
+
+        <div class="reason-card glass">
+
+            <div class="icon">🤍</div>
+
+            <h3>The Way You Care</h3>
+
+            <p>
+                Even in small ways,
+                you have a way of making people
+                feel important.
+            </p>
+
+        </div>
+
+
+        <div class="reason-card glass">
+
+            <div class="icon">✨</div>
+
+            <h3>Just Being You</h3>
+
+            <p>
+                Honestly,
+                I don't think you realize
+                how special you are.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section id="letter">
+
+    <div class="section-title">
+        <span>03 — SOMETHING I WANT TO SAY</span>
+        <h2>A Letter For You</h2>
+    </div>
+
+
+    <div class="letter">
+
+        <h2>Dear [Her Name],</h2>
+
+        <p>
+            I don't know exactly when it happened.
+            Maybe it happened slowly.
+        </p>
+
+        <p>
+            Somewhere between getting to know you,
+            talking to you, laughing with you,
+            and becoming comfortable around you...
+            I realized that what I felt for you
+            wasn't something I wanted to ignore anymore.
+        </p>
+
+        <p>
+            I like you.
+        </p>
+
+        <p>
+            And I don't expect you to suddenly feel
+            the same way.
+            I don't want to pressure you.
+            I just want the chance to show you
+            that my feelings are genuine.
+        </p>
+
+        <p>
+            — [Your Name] 🤍
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL QUESTION -->
+
+<section class="question-section">
+
+    <div class="question-box glass">
+
+        <div class="rose">🌹</div>
+
+        <p class="small-text">
+            SO HERE'S WHAT I WANT TO ASK YOU...
+        </p>
+
+        <h2>Can I Court You?</h2>
+
+        <p>
+            I don't want to rush you.
+            I don't expect an immediate relationship.
+            I simply want the chance to get to know you
+            more intentionally and show you
+            that I'm serious about you.
+        </p>
+
+
+        <div class="choices">
+
+            <button class="choice yes" onclick="showYes()">
+                Yes, you can 🌹
+            </button>
+
+            <button class="choice" onclick="showTime()">
+                Can I think about it? 🤍
+            </button>
+
+            <button class="choice" onclick="showTalk()">
+                Let's talk first 💬
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalMessage"></p>
+
+        <button class="close-button" onclick="closeModal()">
+            Close 🤍
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    Made with effort, courage, and a little bit of love. 🤍
+
+</footer>
+
+
+<script>
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    function createHeart() {
+
+        const heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "♥";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            Math.random() * 25 + 15 + "px";
+
+        heart.style.animationDuration =
+            Math.random() * 5 + 5 + "s";
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(() => {
+            heart.remove();
+        }, 10000);
+
+    }
+
+
+    setInterval(createHeart, 500);
+
+
+
+    /* =========================
+       MODAL FUNCTIONS
+    ========================= */
+
+    const modal = document.getElementById("modal");
+
+    const modalTitle =
+        document.getElementById("modalTitle");
+
+    const modalMessage =
+        document.getElementById("modalMessage");
+
+
+    function openModal(title, message) {
+
+        modalTitle.innerText = title;
+
+        modalMessage.innerText = message;
+
+        modal.classList.add("active");
+
+    }
+
+
+    function closeModal() {
+
+        modal.classList.remove("active");
+
+    }
+
+
+
+    /* =========================
+       YES BUTTON
+    ========================= */
+
+    function showYes() {
+
+        openModal(
+
+            "REALLY?! 😭🤍",
+
+            "Thank you for giving me a chance. I promise I'll do my best to show you that my feelings are genuine. So... when's our first date? 🌹"
+
+        );
+
+        createConfetti();
+
+    }
+
+
+
+    /* =========================
+       NEED TIME BUTTON
+    ========================= */
+
+    function showTime() {
+
+        openModal(
+
+            "Of Course. 🤍",
+
+            "Take all the time you need. There's absolutely no pressure. My feelings aren't a deadline. Thank you for reading everything I wanted to say."
+
+        );
+
+    }
+
+
+
+    /* =========================
+       LET'S TALK BUTTON
+    ========================= */
+
+    function showTalk() {
+
+        openModal(
+
+            "I'd Like That. 💬",
+
+            "Maybe this website said some things I was too nervous to say in person. But I'd still love to hear what you think."
+
+        );
+
+    }
+
+
+
+    /* =========================
+       CONFETTI
+    ========================= */
+
+    function createConfetti() {
+
+        for (let i = 0; i < 120; i++) {
+
+            const confetti =
+                document.createElement("div");
+
+            confetti.classList.add("confetti");
+
+            confetti.style.left =
+                Math.random() * 100 + "vw";
+
+            confetti.style.background =
+                `hsl(${Math.random() * 360}, 80%, 70%)`;
+
+            confetti.style.animationDuration =
+                Math.random() * 3 + 2 + "s";
+
+
+            document.body.appendChild(confetti);
+
+
+            setTimeout(() => {
+
+                confetti.remove();
+
+            }, 5000);
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

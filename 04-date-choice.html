@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Do Dates!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+
+    <div class="top-bar">
+
+        <a href="02-home.html" class="back-button">
+            ← Back
+        </a>
+
+    </div>
+
+
+    <main class="date-container">
+
+        <h1 >If We Were Together...</h1>
+
+        <p class="subtitle">
+            What would you choose for our first date?
+        </p>
+
+
+        <div class="date-carousel">
+
+            <button class="carousel-button" onclick="previousDate()">
+                ←
+            </button>
+
+
+            <div class="date-card" id="dateCard">
+
+                <div class="date-icon" id="dateIcon">
+                    ☕
+                </div>
+
+                <h2 id="dateTitle">
+                    Coffee Date
+                </h2>
+
+                <p id="dateDescription">
+                    Somewhere quiet where we can finally talk without a screen between us.
+                </p>
+
+            </div>
+
+
+            <button class="carousel-button" onclick="nextDate()">
+                →
+            </button>
+
+        </div>
+
+
+        <button class="choose-button" onclick="chooseDate()">
+            I Choose This 🤍
+        </button>
+
+
+        <p id="chosenDate"></p>
+
+        
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

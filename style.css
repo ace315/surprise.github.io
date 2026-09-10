@@ -1,0 +1,1796 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap;);
+
+
+
+:root {
+    --black: #121212;
+    --white: #f5f1eb;
+    --nude: #c9ae9a;
+    --wine: #6f1d2b;
+
+    --glass: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.18);
+}
+
+html {
+            scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+
+    background:
+        radial-gradient(circle at top, #640D14, #38040E 60%);
+
+    color: var(--white);
+
+    min-height: 100vh;
+
+}
+
+
+h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(65px, 12vw, 140px);
+    font-weight: normal;
+    line-height: 1;
+}
+
+h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(25px, 5vw, 30px);
+    margin-top: 10px;
+}
+
+.page {
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+
+.center-container,
+.final-container,
+.letter-container,
+.envelope-container,
+.future-container,
+.date-container {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.glass-card {
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* OPENING */
+
+.opening-card {
+    max-width: 600px;
+
+    padding: 60px;
+
+    text-align: center;
+}
+
+.opening-card h1 {
+    font-size: 3rem;
+
+    margin-bottom: 25px;
+}
+
+.opening-card span {
+    color: var(--nude);
+}
+
+.opening-card p {
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* BUTTONS */
+
+.main-button,
+.choose-button,
+.yes-button,
+.time-button,
+.talk-button {
+
+    display: inline-block;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+
+.main-button,
+.yes-button,
+.choose-button {
+    background: var(--wine);
+
+    color: white;
+}
+
+
+.main-button:hover,
+.yes-button:hover,
+.choose-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(111, 29, 43, 0.5);
+}
+
+
+.time-button,
+.talk-button {
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    border: 1px solid var(--border);
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+
+.back-button {
+    color: var(--white);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+}
+
+
+.layout-controls button,
+.color-buttons button {
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* HOME */
+
+.home-container {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.home-container h1 {
+    text-align: center;
+
+    font-size: 3rem;
+
+    margin-bottom: 40px;
+}
+
+
+.content-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.content-card {
+    min-height: 200px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.content-card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255,255,255,0.12);
+}
+
+
+.content-card span {
+    color: var(--nude);
+}
+
+
+.locked-card {
+    opacity: 0.5;
+}
+
+
+/* DIFFERENT HOME LAYOUTS */
+
+.content-grid.list {
+    grid-template-columns: 1fr;
+}
+
+
+.content-grid.large {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* FUTURE PAGE */
+
+.future-container {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.subtitle {
+    opacity: 0.7;
+
+    margin: 15px 0 40px;
+
+    text-align: center;
+}
+
+
+.future-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.future-card {
+    cursor: pointer;
+}
+
+
+.future-card input {
+    display: none;
+}
+
+
+.check-content {
+    min-height: 180px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: 0.3s;
+}
+
+
+.check-content span {
+    font-size: 3rem;
+}
+
+
+.future-card input:checked + .check-content {
+    background: var(--wine);
+
+    transform: scale(0.97);
+}
+
+
+.future-message {
+    margin-top: 40px;
+
+    text-align: center;
+
+    font-style: italic;
+}
+
+
+/* DATE PAGE */
+
+.date-carousel {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 30px 0;
+}
+
+
+.date-card {
+    width: 400px;
+
+    min-height: 350px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    border-radius: 30px;
+}
+
+
+.date-icon {
+    font-size: 5rem;
+
+    margin-bottom: 25px;
+}
+
+
+.date-card h2 {
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.carousel-button {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+
+/* LETTER */
+
+.letter-card {
+    max-width: 750px;
+
+    padding: 50px;
+
+    line-height: 1.9;
+}
+
+
+.letter-card h2 {
+    margin-bottom: 30px;
+
+    font-size: 2rem;
+}
+
+
+.letter-card p {
+    margin-bottom: 20px;
+}
+
+
+.letter-signature {
+    margin-top: 40px;
+
+    text-align: right;
+
+    font-style: italic;
+}
+
+
+/* ENVELOPE */
+
+.envelope-container {
+    gap: 30px;
+}
+
+
+.envelope {
+    width: 350px;
+
+    height: 220px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+
+.envelope.wine {
+    background: var(--wine);
+}
+
+
+.envelope.nude {
+    background: var(--nude);
+
+    color: var(--black);
+}
+
+
+.envelope.black {
+    background: var(--black);
+
+    border: 1px solid var(--border);
+}
+
+
+.heart {
+    font-size: 5rem;
+}
+
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100px;
+
+    background: rgba(0,0,0,0.15);
+
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+
+.secret-message {
+    max-width: 600px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* FINAL */
+
+.final-card {
+    max-width: 700px;
+
+    padding: 60px;
+
+    text-align: center;
+}
+
+
+.final-card h1 {
+    font-size: 3rem;
+
+    margin: 20px;
+}
+
+
+.final-card p {
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+.main-question {
+    margin: 40px 0;
+
+    font-size: 2.5rem;
+
+    color: var(--nude);
+}
+
+
+.answer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+#answerMessage {
+    margin-top: 30px;
+
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 20px;
+    }
+
+    .content-grid,
+    .future-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .date-card {
+        width: 250px;
+
+        padding: 30px;
+    }
+
+    .opening-card,
+    .final-card,
+    .letter-card {
+        padding: 30px;
+    }
+
+    .opening-card h1,
+    .final-card h1 {
+        font-size: 2.3rem;
+    }
+
+}
+
+/* =========================
+   HEART GAME - UPGRADED
+========================= */
+
+.game-page {
+    min-height: 100vh;
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.game-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+
+.game-instructions {
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* GAME STATS */
+
+.game-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.stat {
+    min-width: 100px;
+    padding: 10px 18px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.1rem;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.stat small {
+    opacity: 0.6;
+    margin-top: 3px;
+}
+
+
+/* GAME AREA */
+
+#gameArea {
+    width: min(92vw, 450px);
+    height: 600px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #8a3446,
+            #2b1720 55%,
+            #121212
+        );
+
+    border: 2px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+
+/* PLAYER */
+
+/* =========================
+   PLAYER IMAGE
+========================= */
+
+#player {
+    position: absolute;
+
+    left: 60px;
+    top: 250px;
+
+    width: 60px;
+    height: 60px;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#player img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   GAME POPUPS
+========================= */
+
+.game-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(6px);
+
+    padding: 20px;
+
+}
+
+
+.popup-content {
+
+    width: min(90vw, 400px);
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3b1f29,
+            #1c1719
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+
+    animation:
+        popupAppear 0.4s ease;
+
+}
+
+
+.popup-content h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.popup-content p {
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+}
+
+
+@keyframes popupAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.85)
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+/* IMPORTANT */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* HEARTS */
+
+.game-heart {
+    position: absolute;
+
+    font-size: 2rem;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(0,0,0,0.3)
+        );
+}
+
+
+/* SPECIAL FINAL HEART */
+
+.final-heart {
+    font-size: 3rem;
+
+    animation:
+        finalHeartPulse 1s infinite alternate;
+}
+
+
+@keyframes finalHeartPulse {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.25);
+    }
+
+}
+
+
+/* START OVERLAY */
+
+.game-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    z-index: 20;
+
+    background:
+        rgba(18,18,18,0.65);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.game-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+
+.game-overlay p {
+    max-width: 300px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* HEART VALUES */
+
+.heart-legend {
+    display: flex;
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+    opacity: 0.8;
+}
+
+
+.heart-legend span {
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.07);
+
+    font-size: 0.9rem;
+}
+
+
+/* RESULTS */
+
+.game-result {
+    margin-top: 25px;
+
+    max-width: 450px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(15px);
+
+    animation: resultAppear 0.5s ease;
+}
+
+
+.game-result h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+
+.game-result p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+.special-heart {
+    font-size: 5rem;
+    margin: 20px;
+
+    animation:
+        finalHeartPulse 1s infinite alternate;
+}
+
+
+@keyframes resultAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    #gameArea {
+        height: 520px;
+    }
+
+    .game-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .stat {
+        min-width: 85px;
+    }
+
+}
+
+#player img {
+
+    animation: playerFloat 0.8s infinite alternate;
+
+}
+
+
+@keyframes playerFloat {
+
+    from {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+    to {
+
+        transform:
+            translateY(3px);
+
+    }
+
+}
+
+/* =========================
+   PLAYLIST
+========================= */
+
+.playlist-page-container {
+
+    width: min(1000px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0 60px;
+
+}
+
+
+.playlist-title 
+.date-container{
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.playlist-title h1
+.date-container h1 {
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    margin: 15px 0;
+
+}
+
+
+.section-label {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    opacity: 0.6;
+
+}
+
+
+/* SONG GRID */
+
+.song-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+
+}
+
+
+/* SONG CARD */
+
+.song-card {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    transition: 0.3s ease;
+
+}
+
+
+.song-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.song-card img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+.song-info {
+
+    padding: 12px 5px 5px;
+
+}
+
+
+.song-info h3 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.song-info p {
+
+    opacity: 0.6;
+
+    margin: 0;
+
+}
+
+/* =========================
+   SELECTED SONG PAGE
+========================= */
+
+.song-detail-container {
+
+    width: min(650px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0 60px;
+
+    text-align: center;
+
+}
+
+
+.selected-song-cover {
+
+    width: min(350px, 80vw);
+
+    margin: auto;
+
+    margin-bottom: 35px;
+
+}
+
+
+.selected-song-cover img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.4);
+
+}
+
+
+.selected-song-info h1 {
+
+    font-size: 2.5rem;
+
+    margin: 10px 0;
+
+}
+
+
+.artist-name {
+
+    opacity: 0.6;
+
+}
+
+
+/* PROGRESS */
+
+#progressBar {
+
+    width: 100%;
+
+    margin: 30px 0;
+
+}
+
+
+/* CONTROLS */
+
+.song-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.song-controls button {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+.play-button {
+
+    width: 70px !important;
+
+    height: 70px !important;
+
+    font-size: 1.5rem;
+
+}
+
+
+/* WHY SONG */
+
+.why-song {
+
+    margin-top: 60px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.why-song h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.why-song p {
+
+    opacity: 0.8;
+
+}
+
+
+/* NAVIGATION */
+
+.song-navigation {
+
+    margin-top: 40px;
+
+}
+
+
+.song-navigation a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+}
+
+/* =========================================
+   03-FUTURE PAGE
+   ========================================= */
+
+
+/* =========================================
+   STICKY TOP BAR
+   ========================================= */
+
+.future-topbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 28px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.future-back {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 18px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    border: 1px solid currentColor;
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+
+}
+
+.future-back:hover {
+
+    transform: translateX(-4px);
+
+}
+
+
+/* =========================================
+   LAYOUT BUTTONS
+   ========================================= */
+
+.future-layout-buttons {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.layout-btn {
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.25s ease;
+
+}
+
+.layout-btn:hover {
+
+    transform: scale(1.08);
+
+}
+
+.layout-btn.active {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
+.future-page {
+
+    width: 100%;
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 45px 25px 80px;
+
+}
+
+
+/* =========================================
+   GLASSMORPHISM BOX
+   ========================================= */
+
+.future-glass {
+
+    width: min(900px, 100%);
+
+    padding: 35px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.future-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+.future-number {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+
+}
+
+.future-heading h1 {
+
+    margin: 0;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    line-height: 1.15;
+
+    text-transform: lowercase;
+
+}
+
+
+/* =========================================
+   DEFAULT GRID
+   EXACTLY LIKE YOUR DRAWING
+   ========================================= */
+
+.future-details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    grid-template-rows:
+        repeat(2, auto);
+
+    gap: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* =========================================
+   DETAIL <P>
+   ========================================= */
+
+.future-details p {
+
+    min-height: 72px;
+
+    margin: 0;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid currentColor;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+.future-details p:hover {
+
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, 0.18);
+
+}
+
+
+/* =========================================
+   LIST LAYOUT
+   ========================================= */
+
+.future-details.list-layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.future-details.list-layout p {
+
+    min-height: auto;
+
+    justify-content: flex-start;
+
+    text-align: left;
+
+    padding: 16px 20px;
+
+}
+
+
+/* =========================================
+   CARD LAYOUT
+   ========================================= */
+
+.future-details.cards-layout {
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+.future-details.cards-layout p {
+
+    min-height: 120px;
+
+    border-radius: 22px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .future-topbar {
+
+        padding: 14px 16px;
+
+    }
+
+    .future-page {
+
+        padding:
+            30px 15px 60px;
+
+    }
+
+    .future-glass {
+
+        padding: 25px 15px;
+
+        border-radius: 22px;
+
+    }
+
+    .future-details {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+    .future-details p {
+
+        min-height: 65px;
+
+        font-size: 11px;
+
+        padding: 9px;
+
+    }
+
+    .future-details.cards-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .future-back {
+
+        padding: 8px 13px;
+
+        font-size: 12px;
+
+    }
+
+    .layout-btn {
+
+        width: 32px;
+        height: 32px;
+
+        font-size: 13px;
+
+    }
+
+    .future-heading h1 {
+
+        font-size: 25px;
+
+    }
+
+}
+
