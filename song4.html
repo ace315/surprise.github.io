@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Now Playing - About You</title>
+
+    <!-- IMPORTANT:
+    ../ because this file is inside
+    the songs folder -->
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="page song-detail-page">
+
+
+    <!-- BACK -->
+
+    <a
+        href="../03-playlist.html"
+        class="back-button"
+    >
+        ← Back
+    </a>
+
+
+    <main class="song-detail-container">
+
+
+        <!-- ALBUM COVER -->
+
+        <div class="selected-song-cover">
+
+            <img
+                src="../images/song4.jfif"
+                alt="Song Cover"
+            >
+
+        </div>
+
+
+        <!-- SONG INFORMATION -->
+
+        <section class="selected-song-info">
+
+            <p class="section-label">
+                NOW PLAYING
+            </p>
+
+
+            <h1>
+                About You
+            </h1>
+
+
+            <p class="artist-name">
+                The 1975
+            </p>
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../music/song4.mp3"
+            ></audio>
+
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <!-- CONTROLS -->
+
+            <div class="song-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    onclick="toggleMusic()"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY THIS SONG -->
+
+        <section class="why-song">
+
+            <h2>
+                Why I choose this song? 
+            </h2>
+
+
+            <p style="font-style: italic; text-align: center;">
+
+                “Do you think I have forgotten?”
+
+                <br><br>
+
+                <!-- PUT YOUR PERSONAL MESSAGE HERE -->
+
+            </p>
+
+
+            <p style="text-align: center;">
+
+                This one is more emotional. I picked it because sometimes 
+                someone stays in your mind even when they're not physically there. 
+                That's what LDR feels like to me. You're far away, but somehow you're still part of my everyday thoughts.
+
+                <br><br>
+
+                <p style="font-style: italic; text-align: center;">
+
+                    Distance doesn't make me think about you less. If anything, 
+                    it makes me realize how often you cross my mind. 
+                    You're not here beside me, but somehow, you're still everywhere.
+                
+                </p>
+
+            </p>
+
+        </section>
+
+
+        <!-- SONG NAVIGATION -->
+
+        <div class="song-navigation">
+
+            <a href="song5.html">
+                Next Song →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

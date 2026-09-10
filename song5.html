@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Now Playing - bad.</title>
+
+    <!-- IMPORTANT:
+    ../ because this file is inside
+    the songs folder -->
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="page song-detail-page">
+
+
+    <!-- BACK -->
+
+    <a
+        href="../03-playlist.html"
+        class="back-button"
+    >
+        ← Back
+    </a>
+
+    <main class="song-detail-container">
+
+
+        <!-- ALBUM COVER -->
+
+        <div class="selected-song-cover">
+
+            <img
+                src="../images/song5.jfif"
+                alt="Song Cover"
+            >
+
+        </div>
+
+
+        <!-- SONG INFORMATION -->
+
+        <section class="selected-song-info">
+
+            <p class="section-label">
+                NOW PLAYING
+            </p>
+
+
+            <h1>
+                bad.
+            </h1>
+
+
+            <p class="artist-name">
+                wave to earth
+            </p>
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../music/song5.mp3"
+            ></audio>
+
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <!-- CONTROLS -->
+
+            <div class="song-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    onclick="toggleMusic()"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY THIS SONG -->
+
+        <section class="why-song">
+
+            <h2>
+                Why I choose this song? 
+            </h2>
+
+
+            <p style="font-style: italic; text-align: center;">
+
+                “You’re the only one I need.”
+
+                <br><br>
+
+                <!-- PUT YOUR PERSONAL MESSAGE HERE -->
+
+            </p>
+
+
+            <p style="text-align: center;">
+
+                I chose this because of its soft and comforting feeling. 
+                It reminds me that love doesn't always have to be dramatic. 
+                Sometimes it's simply wanting to stay beside someone, 
+                even through ordinary days and difficult ones.
+
+                <br><br>
+
+                <p style="font-style: italic; text-align: center;">
+
+                    I don't need every day with you to be perfect. 
+                    I just want to be someone who stays, someone you can come home to, 
+                    even when life isn't going the way we planned.
+                
+                </p>
+
+            </p>
+
+        </section>
+
+
+        <!-- SONG NAVIGATION -->
+
+        <div class="song-navigation">
+
+            <a href="song6.html">
+                Next Song →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

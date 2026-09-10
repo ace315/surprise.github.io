@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Now Playing - Every Summertime</title>
+
+    <!-- IMPORTANT:
+    ../ because this file is inside
+    the songs folder -->
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body class="page song-detail-page">
+
+
+    <!-- BACK -->
+
+    <a
+        href="../03-playlist.html"
+        class="back-button"
+    >
+        ← Back
+    </a>
+
+    <main class="song-detail-container">
+
+
+        <!-- ALBUM COVER -->
+
+        <div class="selected-song-cover">
+
+            <img
+                src="../images/song14.jfif"
+                alt="Song Cover"
+            >
+
+        </div>
+
+
+        <!-- SONG INFORMATION -->
+
+        <section class="selected-song-info">
+
+            <p class="section-label">
+                NOW PLAYING
+            </p>
+
+
+            <h1>
+                Every Summertime
+            </h1>
+
+
+            <p class="artist-name">
+                NIKI
+            </p>
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../music/song14.mp3"
+            ></audio>
+
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <!-- CONTROLS -->
+
+            <div class="song-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    onclick="toggleMusic()"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY THIS SONG -->
+
+        <section class="why-song">
+
+            <h2>
+                Why I choose this song? 
+            </h2>
+
+
+            <p style="font-style: italic; text-align: center;">
+                
+                “I like me better when I'm with you.” 
+
+                <br><br>
+
+                <!-- PUT YOUR PERSONAL MESSAGE HERE -->
+
+            </p>
+
+
+            <p style="text-align: center;">
+
+                This song reminds me of you because... I want to experience those simple, happy moments with you. 
+                Even if we're apart right now, I imagine us eventually having our own little routines, 
+                dates, trips, and memories together.
+
+                <br><br>
+
+                <p style="font-style: italic; text-align: center;">
+
+                    I want to have the kind of memories with you that we'll look back on someday and smile about. 
+                    The random dates, late-night conversations, little adventures, and even the boring days. 
+                    I just want more time with you.
+                
+                </p>
+
+            </p>
+
+        </section>
+
+
+        <!-- SONG NAVIGATION -->
+
+        <div class="song-navigation">
+
+            <a href="song15.html">
+                Next Song →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
